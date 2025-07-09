@@ -278,24 +278,6 @@ main::-webkit-scrollbar {
     animation: fadein 0.5s ease-in-out forwards;
 }   
 
-.input-box input {
-    font-family: 'Poppins';
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    width: 90%;
-    height: 30px;
-    margin: 30px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    color: white;
-    font-size: 16px;
-    padding: 20px 45px 20px 20px;
 
 }
 .wrapper {
@@ -329,7 +311,7 @@ main::-webkit-scrollbar {
     background-color: rgb(154, 212, 212);
     color: black;
     border-radius: 40px;
-    border-color: transparent
+    border-color: transparent;
 }
 
 .login-btn:hover {
