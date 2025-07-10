@@ -306,7 +306,8 @@ main::-webkit-scrollbar {
     background-color: rgba(0, 0, 0, 0.6);
     width: 30vw;
     padding: 30px 40px;
-    border-radius: 20px}
+    border-radius: 20px;
+}
 
     .wrapper h1 {
         color: white;
