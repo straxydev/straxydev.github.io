@@ -1,4 +1,4 @@
- header {
+  header {
     opacity: 1;
     background-color: rgba(0,0,0,0);
     position: fixed;
@@ -152,20 +152,21 @@ main::-webkit-scrollbar {
     width: 0;
 }
 
-.overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0; 
-    animation: fadein 0.5s ease-in-out forwards;
+
+    
+
+@keyframes typing {
+    from { width: 0 }
+}
+@keyframes cursor {
+    50% { border-color: transparent }
 }
 
+.overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(0);
+} 
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -191,17 +192,18 @@ main::-webkit-scrollbar {
 
 .slide-container {
     scroll-snap-align: start;
-    position: relative; 
+    position: relative;
     width: 100%;
-    height: 100vh; 
-    overflow: hidden; 
+    height: 100vh;
+    overflow: hidden;
+    transition: opacity 0.5s ease;
 }
+
 
 .slide-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.6);
     transform: scale(1.1);
     transition: transform 0.5s ease;}
 
@@ -234,6 +236,13 @@ main::-webkit-scrollbar {
     border-radius: 25px;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+
+.overlay.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) translateY(0);
 }
 
 .overlay.visible {
@@ -244,12 +253,21 @@ main::-webkit-scrollbar {
 
 .overlay h1 {
     font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 1rem;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; 
+    margin: 0 auto; 
+    animation: 
+typing 2s forwards, cursor 0.75s step-end infinite;
 }
-
-.overlay h2, .overlay h3 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    margin-bottom: 1rem;
+@keyframes typing {
+    from { 
+        width: 0 
+    }
+    to { 
+        width: 100% 
+    }
 }
 
 .overlay p {
@@ -272,20 +290,39 @@ main::-webkit-scrollbar {
  justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("devsplex/images/wallpaperflare.comwallpaper.jpg") no-repeat;
+    background: url("images/wallpaperflare.comwallpaper.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     animation: fadein 0.5s ease-in-out forwards;
 }   
 
+.input-box input {
+    font-family: 'Poppins';
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 90%;
+    height: 30px;
+    margin: 30px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: white;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+
+}
 .wrapper {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
     width: 30vw;
     padding: 30px 40px;
-    border-radius: 20px;
-}
+    border-radius: 20px}
 
     .wrapper h1 {
         color: white;
@@ -310,7 +347,7 @@ main::-webkit-scrollbar {
     background-color: rgb(154, 212, 212);
     color: black;
     border-radius: 40px;
-    border-color: transparent;
+    border-color: transparent
 }
 
 .login-btn:hover {
@@ -322,7 +359,7 @@ main::-webkit-scrollbar {
 
 
 .products-body {
-    background: url("devsplex/images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg") no-repeat;
+    background: url("images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg") no-repeat;
     background-size: cover; 
     color: white;
     font-family: 'Poppins';
@@ -396,7 +433,7 @@ products-header {
         color: white;
         margin: 0 5px; 
         backdrop-filter: blur(4px);
-        animation: fadein 0.5s ease-in-out forwards;
+        animation: fadein 0.7s ease-in-out forwards;
     }
     
     .product-item-left {
@@ -456,7 +493,7 @@ products-header {
      }
 
     .history-body {
-        background: url(devsplex/images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg) no-repeat;
+        background: url(images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg) no-repeat;
         background-size: cover;
         overflow-y: scroll;
     }
