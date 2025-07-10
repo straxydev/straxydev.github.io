@@ -231,7 +231,7 @@ main::-webkit-scrollbar {
     text-align: center;
     padding: clamp(5px, 2vw, 10px);
     width: clamp(30px, 60%, 800px); 
-    height: clamp(30px, 60%, 27vh);
+    height: clamp(30px, 50%, 27vh);
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     opacity: 0;
