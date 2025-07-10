@@ -290,7 +290,7 @@ typing 2s forwards, cursor 0.75s step-end infinite;
  justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("images/wallpaperflare.comwallpaper.jpg") no-repeat;
+    background: url("devplex/images/wallpaperflare.comwallpaper.jpg") no-repeat;
     background-size: cover;
     background-position: center;
     animation: fadein 0.5s ease-in-out forwards;
@@ -359,7 +359,7 @@ typing 2s forwards, cursor 0.75s step-end infinite;
 
 
 .products-body {
-    background: url("images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg") no-repeat;
+    background: url("devsplex/images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg") no-repeat;
     background-size: cover; 
     color: white;
     font-family: 'Poppins';
@@ -493,7 +493,7 @@ products-header {
      }
 
     .history-body {
-        background: url(images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg) no-repeat;
+        background: url("devsplex/images/vecteezy_abstract-purple-fluid-wave-background_6868933.jpg") no-repeat;
         background-size: cover;
         overflow-y: scroll;
     }
